@@ -53,9 +53,9 @@ app.put("/users/:id", (req,res) => {
         return res.status(404).json({ message: "User not found"})
     }
 
-    user.name = name || user.name;
-    user.email = email || user.email;
-    user.username = username || user.username;
+    user.name = name 
+    user.email = email 
+    user.username = username
 
     res.json({
         message: "User updated successfully",
