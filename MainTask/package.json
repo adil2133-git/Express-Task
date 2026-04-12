@@ -1,0 +1,21 @@
+{
+  "name": "express-task1",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node task2.js",
+    "dev": "nodemon task2.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "dotenv": "^17.4.1",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.4.1",
+    "multer": "^2.1.1"
+  }
+}
