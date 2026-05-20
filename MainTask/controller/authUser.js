@@ -3,7 +3,7 @@ const User = require("../model/userModel")
 const createUser = async (req, res) => {
 
     try {
-        const { name, email, username, photo } = req.body
+        const { name, email, username } = req.body
 
         const newUser = await User.create({
             name,
@@ -44,7 +44,7 @@ const updateUser = async(req,res) => {
         }
 
         if(req.file){
-            updateData.photo = req.body.photo
+            updateData.photo = req.body.path
         }
 
         const user = await User.findByIdAndUpdate(
@@ -54,7 +54,7 @@ const updateUser = async(req,res) => {
         );
         res.json(user)
     }catch(err) {
-        res.status(500).josn({error: err.message})
+        res.status(500).json({error: err.message})
     }
 }
 

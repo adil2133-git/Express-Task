@@ -10,7 +10,7 @@ const registerController = async (req, res) => {
         const existingAdmin = await Admin.findOne({username})
 
         if(existingAdmin){
-            res.status(500).json({message: "Admin already exists!!"})
+            return res.status(500).json({message: "Admin already exists!!"})
         }
 
         const hashedPassword = await bcrypt.hash(password, 10)
